@@ -1,0 +1,200 @@
+
+/* 1. Basic settings */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #193047;
+    line-height: 1.6;
+    background: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 2. Header */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 20px 8%;
+    border-bottom: 1px solid #e8edf2;
+}
+
+.brand {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #193047;
+}
+
+.brand span,
+.hero h1 span {
+    color: #16836b;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+nav a {
+    color: #425466;
+    font-size: 0.95rem;
+}
+
+.nav-button {
+    border: 1px solid #16836b;
+    border-radius: 8px;
+    padding: 9px 15px;
+}
+
+/* 3. Hero section */
+.hero {
+    padding: 90px 8% 85px;
+    text-align: center;
+    background: #f1f8f6;
+}
+
+.eyebrow {
+    color: #16836b;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    max-width: 780px;
+    margin: 18px auto;
+    font-size: clamp(2.3rem, 5vw, 4rem);
+    line-height: 1.15;
+}
+
+.hero-text {
+    max-width: 590px;
+    margin: 0 auto 28px;
+    color: #526273;
+    font-size: 1.1rem;
+}
+
+.primary-button {
+    display: inline-block;
+    padding: 13px 23px;
+    border-radius: 8px;
+    color: #ffffff;
+    background: #16836b;
+    font-weight: 700;
+}
+
+.primary-button:hover {
+    background: #106752;
+}
+
+.location {
+    margin-top: 22px;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+/* 4. Services */
+.services {
+    padding: 75px 8%;
+    text-align: center;
+}
+
+.services h2,
+.about h2,
+.contact h2 {
+    font-size: clamp(1.7rem, 3vw, 2.4rem);
+    line-height: 1.25;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 35px;
+    text-align: left;
+}
+
+.service-card {
+    padding: 25px;
+    border: 1px solid #e3eaf0;
+    border-radius: 12px;
+}
+
+.service-icon {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    color: #106752;
+    background: #e3f4ee;
+    font-weight: 800;
+}
+
+.service-card p,
+.about p,
+.contact p {
+    color: #526273;
+}
+
+/* 5. About and contact */
+.about {
+    padding: 65px 8%;
+    text-align: center;
+    background: #f7f9fb;
+}
+
+.about p {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.contact {
+    padding: 75px 8%;
+    text-align: center;
+}
+
+footer {
+    padding: 24px 8%;
+    text-align: center;
+    border-top: 1px solid #e8edf2;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+/* 6. Mobile layout */
+@media (max-width: 700px) {
+    .site-header {
+        flex-direction: column;
+        padding: 20px 5%;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .hero,
+    .services,
+    .about,
+    .contact {
+        padding: 55px 6%;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+}
